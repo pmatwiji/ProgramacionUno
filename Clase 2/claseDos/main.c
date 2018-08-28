@@ -10,10 +10,13 @@
 void sumarUno(void);
 void sumarDos(int, int);
 int sumarTres(void);
+int sumarCuatro(int, int);
+
 
 int main()
 {
-    /* int numeroUno;
+    /* //caso1
+       int numeroUno;
        int numeroDos;
        int suma;
 
@@ -25,7 +28,8 @@ int main()
        suma = numeroUno+numeroDos;
        printf("La suma es %d", suma);
     */
-    /*    int numeroUno;
+    /*  //caso2
+        int numeroUno;
         int numeroDos;
         int suma;
 
@@ -37,8 +41,21 @@ int main()
     */
     //sumarUno();
     //sumarDos(numeroUno, numeroDos);
-    int suma;
+    /* //caso 3 int suma;
     suma= sumarTres();
+    printf("la suma es %d", suma);
+    */
+    //caso 4
+    int numeroUno;
+    int numeroDos;
+    int suma;
+
+    printf("ingrese el primer numero: ");
+    scanf("%d", &numeroUno);
+    printf("ingrese el segundo numero: ");
+    scanf("%d", &numeroDos);
+
+    suma = sumarCuatro(numeroUno, numeroDos);
     printf("la suma es %d", suma);
     return 0;
 }
@@ -79,5 +96,12 @@ int sumarTres(void)
 
     suma= numeroUno + numeroDos;
 
+    return suma;
+}
+
+int sumarCuatro(int numeroUno, int numeroDos)
+{
+    int suma;
+    suma= numeroUno+numeroDos;
     return suma;
 }
