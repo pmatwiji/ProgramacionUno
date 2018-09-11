@@ -53,10 +53,4 @@ apellido gomez
 apellido y nombre gomez, juan carlos
 
 
-
-
-
-
-
-
 */

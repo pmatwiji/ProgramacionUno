@@ -1,38 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void inicializarArray (int parametroArray[], int cantidad, int valorInicio);
-void mostrarVector (arrayNuevo[cantidad], cantidad);
-
+void cargarYMostrar(int arrayNuevo[], int cantidad, int inicializador);
+void inicializarArray (int arrayNuevo[], int cantidad, int inicializador);
+void mostrarArray (int arrayNuevo[], int cantidad);
 
 int main()
 {
+    int cantidad=5;
+    int arrayNuevo [cantidad];
+    int inicializador=-1;
 
-    int cantidad = 5;
-    int arrayNuevo[cantidad];
-    int valorInicio = -1;
-    //funciones
-    inicializarArray(arrayNuevo[cantidad], cantidad, valorInicio);
-    void mostrarVector (arrayNuevo[cantidad], cantidad)
+    cargarYMostrar(arrayNuevo, cantidad, inicializador);
     return 0;
 }
 
-void inicializarArray (int arrayNuevo[], int cantidad, int valorinicial)
+void inicializarArray (int arrayNuevo[], int cantidad, int inicializador)
 {
-    for(; cantidad>0; cantidad--)
+    for(; cantidad>inicializador; cantidad--)
     {
-        arrayNuevo[cantidad]=valorinicial;
+        arrayNuevo[cantidad]=inicializador++;
+
     }
 }
 
-
-void mostrarVector (arrayNuevo[cantidad], cantidad)
+void mostrarArray (int arrayNuevo[], int cantidad)
 {
     for(; cantidad>0; cantidad--)
     {
-        printf("%d", arrayNuevo[cantidad]);
+        printf("%d\n",arrayNuevo[cantidad]);
     }
+
 }
 
-
-
+void cargarYMostrar(int arrayNuevo[], int cantidad, int inicializador)
+{
+    inicializarArray(arrayNuevo, cantidad, inicializador);
+    mostrarArray(arrayNuevo, cantidad);
+}

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1536635703 source:c:\users\x__bi\desktop\programacionuno\programacionuno\ejercicionombre\ejercicionombre\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
