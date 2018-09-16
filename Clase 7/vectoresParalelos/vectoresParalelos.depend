@@ -3,3 +3,18 @@
 	<stdio.h>
 	<stdlib.h>
 
+1537050174 source:c:\users\x__bi\desktop\programacionuno\programacionuno\clase 7\vectoresparalelos\funciones.c
+	<stdio.h>
+	"funciones.h"
+	<string.h>
+	<ctype.h>
+
+1537135563 c:\users\x__bi\desktop\programacionuno\programacionuno\clase 7\vectoresparalelos\funciones.h
+
+1537135563 source:c:\users\x__bi\desktop\programacionuno\programacionuno\clase 7\vectoresparalelos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
+
