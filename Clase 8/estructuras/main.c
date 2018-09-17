@@ -13,7 +13,8 @@ int main()
     sAlumno listadoMain[A];
     cargarListado(listadoMain, A);
     mostrarListado(listadoMain, A);
-//    ordenarPorNombre (listadoMain);
+    ordenarPorNombre (listadoMain, A);
+
 
 //cargarAlumno(); **
 //mostrarAlumno(miAlumno);  //para un solo alumno

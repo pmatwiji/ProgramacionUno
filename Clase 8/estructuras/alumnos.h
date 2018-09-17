@@ -11,5 +11,5 @@ void mostrarAlumno (sAlumno);
 sAlumno cargarAlumno();
 void cargarListado(sAlumno[], int);
 void mostrarListado(sAlumno[], int);
-//void ordenarPorNombre (sAlumno[]);
+void ordenarPorNombre (sAlumno[], int);
 

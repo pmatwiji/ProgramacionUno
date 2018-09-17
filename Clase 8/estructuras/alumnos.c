@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "alumnos.h"
 #define A 3
 
@@ -21,8 +22,7 @@ sAlumno cargarAlumno()
 
 void mostrarAlumno (sAlumno unAlumno)
 {
-    sAlumno miAlumno;
-    printf("\n%d--%s--%.2f--%d\n", miAlumno.legajo, miAlumno.nombre, miAlumno.altura, miAlumno.nota);
+    printf("\n%d--%s--%.2f--%d\n", unAlumno.legajo, unAlumno.nombre, unAlumno.altura, unAlumno.nota);
 }
 
 void cargarListado(sAlumno listado[], int tam)
@@ -30,7 +30,7 @@ void cargarListado(sAlumno listado[], int tam)
     int i;
     for(i=0;i<tam;i++)
     {
-        listado[i] = cargarAlumno();
+        listado[i] = cargarAlumno(A);
     }
 }
 void mostrarListado(sAlumno listado[], int tam)
@@ -42,29 +42,24 @@ void mostrarListado(sAlumno listado[], int tam)
     }
 }
 
-/*
 void ordenarPorNombre (sAlumno listado[], int tam)
 {
-    int auxInt;
-    float auxFloat;
-    char auxString[100];
-
     int i;
     int j;
     sAlumno auxAlumno;
 
     for(i=0;i<tam-1;i++)
     {
-        for(j=i+1;j<tam;j++)
+        for(j=i+1;j<tam ;j++)
         {
-            if(strcmp(listado[i].nombre,listado[i].nombre[j]>0))
+            if(strcmp(listado[i].nombre, listado[i].nombre[j])>0)
             {
-                auxAlumno=listado[i];
-                listado[i]=listado[j];
-                listado[j]=auxAlumno;
+                auxAlumno = listado[i];
+                listado[i] = listado[j];
+                listado[j] = auxAlumno;
             }
         }
     }
 }
 
-*/
+
