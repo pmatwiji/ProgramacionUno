@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1537197142 source:d:\matwijiszyn\programacionuno\clase 8\estructuras\main.c
+	<stdio.h>
+	<stdlib.h>
+	"alumnos.h"
+
+1537196105 d:\matwijiszyn\programacionuno\clase 8\estructuras\alumnos.h
+
+1537196435 source:d:\matwijiszyn\programacionuno\clase 8\estructuras\alumnos.c
+	<stdio.h>
+	"alumnos.h"
+

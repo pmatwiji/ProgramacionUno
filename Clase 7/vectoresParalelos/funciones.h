@@ -13,4 +13,8 @@ void nombreEmpiezaConP(char [][21], int);
 
 //void mejoresNotas (char[][21], int[], int);
 
-void elMasMediocre(int[], char[][21], int[], float[], int);
+//void elMasMediocre(int[], char[][21], int[], float[], int);
+
+//void modificarNota (int[], int[], int);
+
+void ordenarPorNombre (int[], char[][21], int[], float[], int);

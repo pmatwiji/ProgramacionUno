@@ -153,6 +153,7 @@ void nombreEmpiezaConP(char nombres[][21], int tam)
 
 */
 
+/*
 void elMasMediocre(int legajos[], char nombres[][21], int notas[], float alturas[], int tam)
 {
     int i;
@@ -163,5 +164,50 @@ void elMasMediocre(int legajos[], char nombres[][21], int notas[], float alturas
             printf("\nTenemos al alumno mas mediocre en la clase\n");
         }
 
+    }
+}
+*/
+
+/*
+void modificarNota (int legajos[], int notas[], int tam)
+{
+    int i;
+
+}
+*/
+
+void ordenarPorNombre (int legajos[], char nombres[][21], int notas[], float altura[], int tam)
+{
+    int auxInt;
+    float auxFloat;
+    char auxString[100];
+
+    int i;
+    int j;
+
+    for(i=0;i<tam-1;i++)
+    {
+        for(j=i+1;j<tam;j++)
+        {
+            if(strcmp(nombres[i],nombres[j]>0))
+            {
+                strcpy(auxString, nombres[i]);
+                strcpy(nombres[i], nombres[j]);
+                strcpy(nombres[j],auxString);
+
+                auxInt = legajos[i];
+                legajos[i] = legajos[j];
+                legajos[j] = auxInt;
+
+                auxInt = notas[i];
+                notas[i] = notas[j];
+                notas[j] = auxInt;
+
+                auxFloat = altura[i];
+                altura[i] = altura[j];
+                altura[j] = auxFloat;
+
+            }
+        }
     }
 }

@@ -28,13 +28,14 @@ int main()
 
 
     cargarAlumnos(legajos, nombres, notas, alturas, T);
+    ordenarPorNombre (legajos,nombres,notas,alturas, T);
     mostrarAlumnos(legajos, nombres, notas, alturas, T);
     ordenarAlfabeticamente(nombres, T);
     contadorAux = contadorAprobados(contadorAux, notas, T);
     //cantidadDeJuanes(contadorAux, nombres, T);
     nombreEmpiezaConP(nombres, T);
     //mejoresNotas (nombres, notas, T);
-    elMasMediocre(legajos, nombres, notas, alturas, T);
+    //elMasMediocre(legajos, nombres, notas, alturas, T);
 
 
 
