@@ -9,7 +9,7 @@ typedef struct
 
 void mostrarAlumno (sAlumno);
 sAlumno cargarAlumno();
-void cargarListado(sAlumno[], int);
-void mostrarListado(sAlumno[], int);
-void ordenarPorNombre (sAlumno[], int);
+void cargarListado(sAlumno listado[], int);
+void mostrarListado(sAlumno listado[], int);
+void ordenarPorNombre (sAlumno listado[], int);
 

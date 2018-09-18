@@ -10,13 +10,14 @@
 	<stdio.h>
 	"alumnos.h"
 
-1537207128 source:c:\users\x__bi\desktop\programacionuno\programacionuno\clase 8\estructuras\alumnos.c
+1537208479 source:c:\users\x__bi\desktop\programacionuno\programacionuno\clase 8\estructuras\alumnos.c
 	<stdio.h>
+	<string.h>
 	"alumnos.h"
 
-1537207128 c:\users\x__bi\desktop\programacionuno\programacionuno\clase 8\estructuras\alumnos.h
+1537232805 c:\users\x__bi\desktop\programacionuno\programacionuno\clase 8\estructuras\alumnos.h
 
-1537207915 source:c:\users\x__bi\desktop\programacionuno\programacionuno\clase 8\estructuras\main.c
+1537232221 source:c:\users\x__bi\desktop\programacionuno\programacionuno\clase 8\estructuras\main.c
 	<stdio.h>
 	<stdlib.h>
 	"alumnos.h"

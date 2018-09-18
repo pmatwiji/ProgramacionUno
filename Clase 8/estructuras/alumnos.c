@@ -42,17 +42,18 @@ void mostrarListado(sAlumno listado[], int tam)
     }
 }
 
-void ordenarPorNombre (sAlumno listado[], int tam)
+void ordenarPorNombre(sAlumno listado[], int tam)
 {
     int i;
     int j;
+
     sAlumno auxAlumno;
 
-    for(i=0;i<tam-1;i++)
+    for(i=0; i<tam-1; i++)
     {
-        for(j=i+1;j<tam ;j++)
+        for(j=i+1; j<tam; j++)
         {
-            if(strcmp(listado[i].nombre, listado[i].nombre[j])>0)
+            if(strcmp(listado[i].nombre, listado[j].nombre)>0)
             {
                 auxAlumno = listado[i];
                 listado[i] = listado[j];
@@ -60,6 +61,6 @@ void ordenarPorNombre (sAlumno listado[], int tam)
             }
         }
     }
-}
 
+}
 

@@ -12,8 +12,9 @@ int main()
     //menu de usuario
     sAlumno listadoMain[A];
     cargarListado(listadoMain, A);
-    mostrarListado(listadoMain, A);
     ordenarPorNombre (listadoMain, A);
+    mostrarListado(listadoMain, A);
+
 
 
 //cargarAlumno(); **
