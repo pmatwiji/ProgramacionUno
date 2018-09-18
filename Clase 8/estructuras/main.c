@@ -11,6 +11,12 @@ int main()
 
     //menu de usuario
     sAlumno listadoMain[A];
+    int i;
+    for(i=0;i<A; i++)
+    {
+        listadoMain[i].estado=-1;
+    }
+
     cargarListado(listadoMain, A);
     ordenarPorNombre (listadoMain, A);
     mostrarListado(listadoMain, A);

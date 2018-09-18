@@ -18,11 +18,18 @@
 	<ctype.h>
 	"funciones.h"
 
-1537187765 source:d:\matwijiszyn\programacionuno\clase 7\vectoresparalelos\funciones.c
+1537272415 source:d:\matwijiszyn\programacionuno\clase 7\vectoresparalelos\funciones.c
 	<stdio.h>
 	"funciones.h"
 	<string.h>
 	<ctype.h>
 
-1537187751 d:\matwijiszyn\programacionuno\clase 7\vectoresparalelos\funciones.h
+1537272415 d:\matwijiszyn\programacionuno\clase 7\vectoresparalelos\funciones.h
+
+1537272415 source:d:\matwijiszyn\programacionuno\clase 7\vectoresparalelos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones.h"
 

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1537277398 source:d:\matwijiszyn\programacionuno\clase 9\clase9\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+

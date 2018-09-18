@@ -64,3 +64,25 @@ void ordenarPorNombre(sAlumno listado[], int tam)
 
 }
 
+void modificarListado(sAlumno listado[], int);
+{
+    int legajo;
+    //mostrar listado
+    printf("ingrese legajo: ");
+    scanf("%d", &legajo);
+    for(i=0;i<tam;i++)
+    {
+        if(legajo == listado[i].legajo)
+        {
+            //mostrar alumno entero
+            //pedir nueva nota
+            //verifico si quiere hacerlo
+            //modifico la nota
+            //si no, aviso cancelar modificiacion
+
+        } else
+        {
+            //avisar que no se encontro y volver al menu
+        }
+    }
+}
