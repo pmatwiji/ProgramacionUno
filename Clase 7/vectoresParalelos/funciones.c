@@ -3,87 +3,94 @@
 #include "funciones.h"
 #include <string.h>
 #include <ctype.h>
+#define A 3
 
-void cargarAlumnos(int legajos[], char nombres[][21], int notas[], float alturas[], int tam)
+
+sAlumno cargarAlumno()
 {
+    sAlumno miAlumno;
     int i;
-    int j;
     char buffer[1024];
-
-    for(i=0; i<tam; i++)
+    printf("Ingrese el legajo: ");
+    scanf("%d", &miAlumno.legajo);
+    printf("Ingrese el nombre: ");
+    fflush(stdin);
+    gets(buffer);
+    while(strlen(buffer)>20)
     {
-        printf("Ingrese legajo: ");
-        scanf("%d", &legajos[i]);
-        printf("Ingrese nombre: ");
+        printf("Reingrese su nombre: ");
         fflush(stdin);
         gets(buffer);
-        while(strlen(buffer)>20)
-        {
-            printf("Reingrese su nombre: ");
-            fflush(stdin);
-            gets(buffer);
-        }
-        strcpy(nombres[i], buffer);
-        nombres[i][0]=toupper(nombres[i][0]);
-
-        for (j=0; j<strlen(nombres[i]); j++)
-        {
-            if(nombres[i][j]== ' ')
-            {
-                nombres[i][j+1]=toupper(nombres[i][j+1]);
-            }
-        }
-        printf("Ingrese nota: ");
-        scanf("%d", &notas[i]);
-        printf("Ingrese altura: ");
-        scanf("%f", &alturas[i]);
-
     }
+    strcpy(miAlumno.nombre, buffer);
+    miAlumno.nombre[0]=toupper(miAlumno.nombre[0]);
+
+    for (i=0; i<strlen(miAlumno.nombre); i++)
+    {
+        if(miAlumno.nombre[i]== ' ')
+        {
+            miAlumno.nombre[i+1]=toupper(miAlumno.nombre[i+1]);
+        }
+    }
+    printf("Ingrese la altura: ");
+    scanf("%f", &miAlumno.altura);
+    printf("Ingrese la nota: ");
+    scanf("%d", &miAlumno.nota);
+
+    return miAlumno;
 }
 
-void mostrarAlumnos(int legajos[], char nombres[][21], int notas[], float alturas[], int tam)
+void mostrarAlumno (sAlumno unAlumno)
+{
+    printf("%5d %21s %5.2f %5d\n", unAlumno.legajo, unAlumno.nombre, unAlumno.altura, unAlumno.nota);
+}
+
+void cargarListado(sAlumno listado[], int tam)
+{
+    int i;
+    for(i=0; i<tam; i++)
+    {
+        listado[i] = cargarAlumno(A);
+    }
+}
+void mostrarListado(sAlumno listado[], int tam)
 {
     int i;
     printf("%5s %21s %5s %5s\n","Legajo","Nombre","Nota","Altura");
-    for(i=0; i<tam; i++)
+    for (i=0; i<tam; i++)
     {
-        printf("%5d %21s %5d %5.2f\n", legajos[i], nombres[i], notas[i], alturas[i] );
-
+        mostrarAlumno(listado[i]);
     }
 }
 
-void ordenarAlfabeticamente (char nombres[][21], int tam)
+void ordenarPorNombre(sAlumno listado[], int tam)
 {
     int i;
     int j;
-    char aux[21];
+    sAlumno auxAlumno;
+
     for(i=0; i<tam-1; i++)
     {
         for(j=i+1; j<tam; j++)
         {
-            if(strcmp(nombres[i], nombres[j]) == 1)
+            if(strcmp(listado[i].nombre, listado[j].nombre)>0)
             {
-                strcpy(aux,nombres[i]);
-                strcpy(nombres[i],nombres[j]);
-                strcpy(nombres[j],aux);
+                auxAlumno = listado[i];
+                listado[i] = listado[j];
+                listado[j] = auxAlumno;
             }
         }
     }
 
-    printf("\nNombres ordenados alfabeticamente: \n\n");
-    for(i=0; i<tam; i++)
-    {
-        printf("%s\n", nombres[i]);
-    }
 }
 
-int contadorAprobados(int contador, int notas[],int tam)
+/*int contadorAprobados(sAlumno listado[], int tam)
 {
     int i = 0;
-    contador = 0;
+    int contador = 0;
     for( ; i<tam; i++)
     {
-        if(notas[i]>=6)
+        if(sAlumno.nota>=6)
         {
             contador++;
         }
@@ -92,6 +99,9 @@ int contadorAprobados(int contador, int notas[],int tam)
     printf("\nLa cantidad de alumnos aprobados son: %d\n\n", contador);
     return contador;
 }
+*/
+
+
 /*
 int cantidadDeJuanes(int contador, char nombres[][21], int tam)
 {
@@ -113,20 +123,19 @@ int cantidadDeJuanes(int contador, char nombres[][21], int tam)
 }
 */
 
-void nombreEmpiezaConP(char nombres[][21], int tam)
-{
-    int i;
-    printf("\nNombres con P: \n\n");
-    for(i=0; i<tam; i++)
-    {
-        if(nombres[i][0] == 'P' || nombres[i][0] == 'p')
-        {
-            printf("%s\n",nombres[i]);
-            //comienzaConP++;
-        }
-    }
-
-}
+//void nombreEmpiezaConP(sAlumno listado[], int tam)
+//{
+//    int i;
+//    printf("\nNombres con P: \n\n");
+//    for(i=0; i<tam; i++)
+//    {
+//        if(listado[i].nombre[0] == 'P' || listado[i].nombre[i][0] == 'p')
+//        {
+//            printf("%s\n",listado[i].nombre[i]);
+//        }
+//    }
+//
+//}
 
 /*
     void mejoresNotas (char nombres[][21], int notas[], int tam)
@@ -176,7 +185,7 @@ void modificarNota (int legajos[], int notas[], int tam)
 }
 */
 
-void ordenarPorNombre (int legajos[], char nombres[][21], int notas[], float altura[], int tam)
+/*void ordenarPorNombre (int legajos[], char nombres[][21], int notas[], float altura[], int tam)
 {
     int auxInt;
     float auxFloat;
@@ -185,11 +194,11 @@ void ordenarPorNombre (int legajos[], char nombres[][21], int notas[], float alt
     int i;
     int j;
 
-    for(i=0;i<tam-1;i++)
+    for(i=0; i<tam-1; i++)
     {
-        for(j=i+1;j<tam;j++)
+        for(j=i+1; j<tam; j++)
         {
-            if(strcmp(nombres[i],nombres[j]>0))
+            if(strcmp(nombres[i],nombres[j])>0)
             {
                 strcpy(auxString, nombres[i]);
                 strcpy(nombres[i], nombres[j]);
@@ -211,3 +220,4 @@ void ordenarPorNombre (int legajos[], char nombres[][21], int notas[], float alt
         }
     }
 }
+*/
