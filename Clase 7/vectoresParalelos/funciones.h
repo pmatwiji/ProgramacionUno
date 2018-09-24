@@ -10,10 +10,10 @@ typedef struct
 
 void mostrarAlumno (sAlumno);
 sAlumno cargarAlumno();
-void cargarListado(sAlumno listado[], int);
-void mostrarListado(sAlumno listado[], int);
-void ordenarPorNombre (sAlumno listado[], int);
-//int contadorAprobados(sAlumno listado[], int)
+void cargarListado(sAlumno[], int);
+void mostrarListado(sAlumno[], int);
+void ordenarPorNombre (sAlumno[], int);
+void mostrarAprobados(sAlumno[], int);
 
 //int cantidadDeJuanes(int, char[][21], int);
 

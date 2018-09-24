@@ -3,30 +3,6 @@
 #include <conio.h>
 int main()
 {
-//    do
-//    {
-//        printf("a. Alta\no. Ordenar\nm. Mostrar");
-//        printf("Ingrese una opcion: ");
-//        opcion= getche();
-//        switch(opcion)
-//        {
-//        case 'a':
-//            //cargar listado
-//            break;
-//        case 'o':
-//            //ordenar
-//            break;
-//        case 'm':
-//            //mostrar
-//            break;
-//        case 'M':
-//            //modificar
-//              break;
-//        }
-//        while (opcion != 's');
-//    }
-
-
     /** \brief busca espacio disponible
      *
      * \param int[] listado de enteros

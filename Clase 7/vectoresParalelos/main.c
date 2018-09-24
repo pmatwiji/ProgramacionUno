@@ -5,8 +5,6 @@
 #include "funciones.h"
 #define A 2
 
-//ordenar nombre X
-//muestre los alumnos aprobados (nota>6) X
 //muestre los alumnos que se llaman Juan
 //muestre los alumnos cuyo nombre comienzan con P X
 //El alumno con mas nota (sabiendo que puede ser mas que uno)
@@ -20,25 +18,36 @@
 
 int main()
 {
-//    int legajos[T];
-//    char nombres[T][21];
-//    int notas[T];
-//    float alturas[T];
 
-
+    char opcion;
     sAlumno listadoMain[A];
-    cargarListado(listadoMain, A);
-    ordenarPorNombre (listadoMain, A);
-    mostrarListado(listadoMain, A);
+    do
+    {
+        printf("a. Cargar alumnos\nb. Ordenar alumnos\nc. Mostrar alumnos\nd. Mostrar alumnos aprobados\n");
+        printf("Ingrese una opcion: ");
+        fflush(stdin);
+        scanf("%c", &opcion);
+        switch(opcion)
+        {
+        case 'a':
+            cargarListado(listadoMain, A);
+            break;
+        case 'b':
+            ordenarPorNombre (listadoMain, A);
+            break;
+        case 'c':
+            mostrarListado(listadoMain, A);
+            break;
+        case 'd':
+            mostrarAprobados(listadoMain, A);
+            break;
+        }
 
 //    contadorAprobados(listadoMain, A);
 //    cantidadDeJuanes(contadorAux, nombres, T);
 //    nombreEmpiezaConP(listadoMain, A);
-    //mejoresNotas (nombres, notas, T);
-    //elMasMediocre(legajos, nombres, notas, alturas, T);
-
-
-
-
+        //mejoresNotas (nombres, notas, T);
+        //elMasMediocre(legajos, nombres, notas, alturas, T);
+    } while (opcion != 'x');
 }
 

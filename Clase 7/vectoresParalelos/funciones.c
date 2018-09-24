@@ -8,6 +8,7 @@
 
 sAlumno cargarAlumno()
 {
+    system("cls");
     sAlumno miAlumno;
     int i;
     char buffer[1024];
@@ -36,8 +37,10 @@ sAlumno cargarAlumno()
     scanf("%f", &miAlumno.altura);
     printf("Ingrese la nota: ");
     scanf("%d", &miAlumno.nota);
+    system("cls");
 
     return miAlumno;
+
 }
 
 void mostrarAlumno (sAlumno unAlumno)
@@ -47,24 +50,29 @@ void mostrarAlumno (sAlumno unAlumno)
 
 void cargarListado(sAlumno listado[], int tam)
 {
+
     int i;
     for(i=0; i<tam; i++)
     {
         listado[i] = cargarAlumno(A);
     }
+
 }
 void mostrarListado(sAlumno listado[], int tam)
 {
+
     int i;
-    printf("%5s %21s %5s %5s\n","Legajo","Nombre","Nota","Altura");
+    printf("%5s %21s %5s %5s\n","Legajo","Nombre","Altura","Nota");
     for (i=0; i<tam; i++)
     {
         mostrarAlumno(listado[i]);
     }
+
 }
 
 void ordenarPorNombre(sAlumno listado[], int tam)
 {
+
     int i;
     int j;
     sAlumno auxAlumno;
@@ -82,24 +90,24 @@ void ordenarPorNombre(sAlumno listado[], int tam)
         }
     }
 
+
 }
 
-/*int contadorAprobados(sAlumno listado[], int tam)
+void mostrarAprobados(sAlumno listado[], int tam)
 {
-    int i = 0;
-    int contador = 0;
-    for( ; i<tam; i++)
-    {
-        if(sAlumno.nota>=6)
-        {
-            contador++;
-        }
 
+    int i;
+    printf("%5s %21s %5s %5s \n", "Legajo", "Nombre", "Altura", "Nota");
+    for(i=0; i<tam; i++)
+    {
+        if(listado[i].nota >= 6)
+        {
+            printf("%5d %21s %5.2f %5d \n", listado[i].legajo, listado[i].nombre, listado[i].altura, listado[i].nota);
+        }
     }
-    printf("\nLa cantidad de alumnos aprobados son: %d\n\n", contador);
-    return contador;
+
 }
-*/
+
 
 
 /*
