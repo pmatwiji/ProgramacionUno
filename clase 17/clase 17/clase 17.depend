@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1540307208 source:d:\matwijiszyn\programacionuno\clase 17\clase 17\main.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
+
+1540306653 d:\matwijiszyn\programacionuno\clase 17\clase 17\persona.h
+
