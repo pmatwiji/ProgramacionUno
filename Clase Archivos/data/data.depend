@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1540900203 source:d:\matwijiszyn\programacionuno\clase archivos\data\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	"empleados.h"
+
+1540899814 d:\matwijiszyn\programacionuno\clase archivos\data\empleados.h
+
+1540900425 source:d:\matwijiszyn\programacionuno\clase archivos\data\main.c
+	<stdio.h>
+	<stdlib.h>
+	"empleados.h"
+
